@@ -15,9 +15,17 @@ Category.hasMany(Product, {
   onDelete: 'SET NULL'
 });
 // Products belongToMany Tags (through ProductTag)
-
+Product.belongsToMany(Tag, {
+  through: {
+    moduel: ProductTag
+  }
+});
 // Tags belongToMany Products (through ProductTag)
-
+Product.belongsToMany(Product, {
+  through: {
+    moduel: ProductTag
+  }
+});
 module.exports = {
   Product,
   Category,

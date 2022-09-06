@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
   }).then(tagData => res.json(tagData))
   .catch(err => {
     console.log(err);
-  })
+  });
 
 });
 
@@ -39,12 +39,12 @@ router.get('/:id', (req, res) => {
       res.status(404).json({
         message: 'no matching id'
       });
-      res.json(tagData)
+      return;
     }
+    res.json(tagData);
   })
   .catch(err => {
     console.log(err);
-    res.status(500).json(err);
   });
 });
 
@@ -55,9 +55,7 @@ router.post('/', (req, res) => {
   }).then(tagData => res.json(tagData))
   .catch(err => {
     console.log(err);
-    res.status(500).json(err);
   });
-  return;
 });
 
 router.put('/:id', (req, res) => {
@@ -71,6 +69,7 @@ router.put('/:id', (req, res) => {
       res.status(404).json({
         message: 'no matching id'
       });
+      res.json(tagData);
       return;
     }
   })
@@ -85,8 +84,10 @@ router.delete('/:id', (req, res) => {
       res.status(404).json({
         message: 'no matching id'
       });
+      
       return;
     }
+    res.json(tagData);
   }).catch(err => {
     console.log(err);
   })

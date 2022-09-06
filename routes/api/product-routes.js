@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
  Product.findAll({
     include: [
       {model: Category,
-      attributes: ['id', 'category_name']},
+      attributes: ['id', 'category_name']
+      },
       {
         model: Tag,
         attributes: ['id', 'tag_name']
@@ -19,6 +20,7 @@ router.get('/', (req, res) => {
   }).then(productData => res.json(productData))
   .catch(err => {
     console.log(err);
+    res.status(500).json(err);
   });
 });
 
@@ -63,13 +65,13 @@ router.post('/', (req, res) => {
    .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
-        const productTagIdArr = req.body.tagIds.map((tag_id) => {
+        const allProductTag = req.body.tagIds.map((tag_id) => {
           return {
             product_id: product.id,
             tag_id,
           };
         });
-        return ProductTag.bulkCreate(productTagIdArr);
+        return ProductTag.bulkCreate(allProductTag);
       }
       // if no product tags, just respond
       res.status(200).json(product);
@@ -77,7 +79,6 @@ router.post('/', (req, res) => {
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
     });
   });
 
@@ -118,8 +119,7 @@ router.put('/:id', (req, res) => {
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
-      res.status(400).json(err);
+      console.log(err);
     });
 });
 

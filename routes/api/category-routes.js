@@ -39,8 +39,9 @@ router.get('/:id', (req, res) => {
           message: 'no matching id'
         }
       ); 
+      return;
     }  
-    return;
+    res.json(categoryData)
       
   }).catch(err => {
     console.log(err);
@@ -54,6 +55,7 @@ router.post('/', (req, res) => {
   }).then(categoryData => res.json(categoryData))
   .catch(err => {
     console.log(err);
+   
   })
 });
 
@@ -66,6 +68,7 @@ router.put('/:id', (req, res) => {
       res.status(404).json({
         message: 'no matching id'
       });
+      res.json(categoryData);
       return;
     }
     res.json(categoryData);

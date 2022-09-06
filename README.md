@@ -19,6 +19,18 @@
   After the server is launched. user's can then use Insomnia, to utilize the get(in general and by ID)/post/put and delete routes. These are demonstrated in the videos below. 
 
 
+Get-Routes
+![Untitled_ Sep 6, 2022 12_49 PM](https://user-images.githubusercontent.com/105015206/188728142-5de80a5f-d332-4850-9b2b-dddc5cbd8f94.gif)
+
+Post-Routes
+![Untitled_ Sep 6, 2022 12_52 PM](https://user-images.githubusercontent.com/105015206/188728130-4f5adc0e-910d-4451-a772-9759cbdb8da6.gif)
+
+Put/Delete Routes
+![Untitled_ Sep 6, 2022 12_56 PM](https://user-images.githubusercontent.com/105015206/188728135-6f9afc75-563f-4d77-8fc1-7c52c666fee4.gif)
+
+
+
+
   ## Credits:
   The starter code for this project was cloned from GitHub user @Xandromus
 

@@ -13,20 +13,22 @@
   "Shop n' Data" is a backend for an ecommerce site that is composed of various data relating to the site's product inventory, including information about product tags and the categories they belong to. This project incorporated my knowledge regarding Object-relational mapping (ORM), MySQL and Node.js broadly. Additionally, I was able to practice using Insomnia to utilize my get/post/put and delete routes. A challenge I faced in trying to complete this project is ensuring that all of the routes functioned anddemonstrated their functionality in insomnia. Incorporating JSON in insomnia required me reviewing my class notes to ensure that each route (for categories, tags and products) were not just replicas of one another but were targeting their given set of objects. 
 
   ## Installation: 
-  In order to install the Shop n' Data application, users must first clone my repository from github onto their own local repository. After having the files on their own computer, then they must also install MySQL. After MySQL is set up, and they have launced a server connection, then users can seed their sql files on VS Code. To seed the files, users must open an integrated terminal at their server.js file. Simply right click an select "open integrated terminal" in your file inventory. After opening an integrated terminal type "mysql -u root -p" and type and then type in your password. After launching mysql, seed your schema file by typing "source db/schema.sql". After sourcing your schema file, quit the application by typing "quit" and then type "node run seed" to seed your index.js file. After seeding your files, type "node server.js" to launch the server. 
+  In order to install the Shop n' Data application, users must first clone my repository from github onto their own local repository. After having the files on their own computer, then they must also install MySQL. After MySQL is set up, and they have launced a server connection, then users can seed their sql files on VS Code. To seed the files, users must open an integrated terminal at their server.js file. Simply right click an select "open integrated terminal" in your file inventory. After opening an integrated terminal type "mysql -u root -p" and type and then type in your password. After launching mysql, seed your schema file by typing "source db/schema.sql". After sourcing your schema file, quit the application by typing "quit" and then type "npm run seed" to seed your index.js file. After seeding your files, type "node server.js" to launch the server. 
 
   ## Usage: 
   After the server is launched. user's can then use Insomnia, to utilize the get(in general and by ID)/post/put and delete routes. These are demonstrated in the videos below. 
 
+Press below to access video walkthroughs: 
 
-Get-Routes
-![Untitled_ Sep 6, 2022 12_49 PM](https://user-images.githubusercontent.com/105015206/188728142-5de80a5f-d332-4850-9b2b-dddc5cbd8f94.gif)
 
-Post-Routes
-![Untitled_ Sep 6, 2022 12_52 PM](https://user-images.githubusercontent.com/105015206/188728130-4f5adc0e-910d-4451-a772-9759cbdb8da6.gif)
+[Get-Routes](https://drive.google.com/file/d/15FEJiCgnElv3f-JOKud7YtxJ5r5Le6Fy/view)
 
-Put/Delete Routes
-![Untitled_ Sep 6, 2022 12_56 PM](https://user-images.githubusercontent.com/105015206/188728135-6f9afc75-563f-4d77-8fc1-7c52c666fee4.gif)
+
+[Post-Routes](https://drive.google.com/file/d/1fLhb0JdbVqKCpku1e0XXH57F2xJAWu4m/view)
+
+
+[Put/Delete Routes](https://drive.google.com/file/d/1Vmz7Kpxg2lX4aHmVNmuSbHMRNIkQF6ga/view)
+
 
 
 
